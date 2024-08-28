@@ -1,0 +1,994 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root, [data-theme] {
+    background-color: #fff;
+    color-scheme: light !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-size: 18px;
+    transition: 100ms;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: #111;
+    background-color: #fff;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+main {
+    overflow-x: hidden;
+    background-color: #fff;
+}
+
+h1 {
+    font-size: 52px !important;
+    font-weight: 700 !important;
+}
+
+h2 {
+    font-size: 32px !important;
+    font-weight: 700 !important;
+}
+
+a {
+    text-decoration: none;
+    
+    color: #111;
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.container {
+    max-width: 80%;
+    margin: 140px auto;
+}
+
+.button {
+    background-color: #1DD100;
+    border: none;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+.button:hover {
+    background-color: #8bd680;
+}
+
+@media screen and (max-width: 824px) {
+    * {
+        font-size: 14px;
+    }
+
+    h1 {
+        font-size: 26px !important;
+    }
+
+    h2 {
+        font-size: 20px !important;
+    }
+
+    .container {
+        max-width: 95%;
+        margin: 100px auto;
+    }
+}
+
+/* header start */
+#header {
+    margin: 20px auto;
+}
+
+.header_wraper {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu_wraper {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.menu_wraper li {
+    padding: 10px 30px;
+}
+
+.menu_wraper li a:hover {
+    color: #1DD100;
+}
+
+.header_ticket_btn button{
+    border: 1px solid #1DD100;
+    padding: 10px 20px;
+    background-color: #E8FAE6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border-radius: 10px;
+}
+
+.header_ticket_btn button .text {
+    color: #1DD100;
+    font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+    .header_ticket_btn button {
+        padding: 5px 10px;
+        border-radius: 8px;
+    }
+
+    .banner_content .subtext {
+        padding-bottom: 20px;
+    }
+}
+/* header end */
+
+
+
+
+/* banner start */
+#banner {
+    background-image: url(images/banner.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 30px;
+    position: relative;
+    margin-top: 0 !important;
+}
+
+.banner_content {
+    margin: auto;
+    width: 50%;
+    text-align: center;
+    padding: 100px 20px 200px 20px;
+}
+
+.banner_content .subtext {
+    color: #fff;
+    padding: 15px 0 35px 0;
+}
+
+.info_wraper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -40px;
+    left: 10%;
+    width: 80%;
+}
+
+.info_box {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    padding: 20px 40px;
+    border-radius: 20px;
+    margin: 0 2%;
+    box-shadow: 0px 3px 0px 0px #1DD100;
+}
+
+@media screen and (max-width: 1660px){
+    .banner_content {
+        width: 70%;
+    }
+
+    .info_wraper {
+        width: 85%;
+        left: 7%;
+    }
+
+    .info_box {
+        padding: 10px 20px;
+        margin: 1%;
+    }
+
+    .menu_wraper {
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 1176px){
+    .banner_content {
+        width: 100%;
+        padding: 30px 20px 30px 20px;
+    }
+
+    .menu_wraper li {
+        padding: 5px 20px;
+    }
+
+    .info_wraper {
+        position: initial;
+        width: 100%;
+        margin: auto;
+    }
+
+}
+
+@media screen and (max-width: 968px) {
+    .menu_wraper li {
+        padding: 5px 10px;
+    }
+}
+
+@media screen and (max-width: 642px) {
+    .menus {
+        display: none;
+    }
+
+    .info_wraper {
+        flex-direction: column;
+        width: 240px;
+        padding-bottom: 30px;
+    }
+}
+/* banner end */
+
+
+
+
+
+/* offer start */
+#offer {
+    padding-top: 80px;
+}
+
+#offer .title {
+    text-align: center;
+    padding-bottom: 50px;
+}
+
+.coupon_wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupon_info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    width: 48%;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 60px;
+    gap: 30px;
+    position: relative;
+    border-radius: 20px;
+}
+
+.coupon_info::after {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-40%); 
+    background-image: url(images/cupon-devider.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.coupon_name {
+    font-weight: 600;
+    display: block;
+}
+
+.coupon_date {
+    opacity: .8;
+    margin-top: 10px;
+    display: block;
+}
+
+.code_title {
+    opacity: .8;
+}
+
+.coupon_info .right_side {
+    text-align: center;
+}
+
+.new_coupon {
+    background-color: #FFBF0F;
+}
+
+.couple_coupon {
+    background-color: #F78C9C;
+}
+
+.see_all {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.see_all button {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px 30px;
+    border: 2px solid #1DD100;
+    color: #1DD100;
+    border-radius: 20px;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 1665px) {
+    .coupon_info {
+        padding: 60px 20px;
+        width: 49.3%;
+        gap: 0;
+    }
+}
+
+@media screen and (max-width: 1343px) {
+    .coupon_info {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .coupon_info::after {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .coupon_wrap{
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .coupon_info {
+        width: 100%;
+    }
+
+    .coupon_info::after {
+        transform: translateX(-45%);
+    }    
+
+    #offer {
+        padding-top: 0;
+    }
+}
+/* offer end */
+
+
+/* ticket info start */
+#ticket .top_content {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+#ticket {
+    padding: 1px 0;
+    border-radius: 70px 70px 0 0;
+    box-shadow: 0px -3px 0px 0px #1DD100;
+}
+
+.ticket_info {
+    background-color: #fff;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    gap: 40px;
+    padding: 30px;
+}
+
+.ticket_info .coach {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket_info .coach span {
+    color: #7c7a7a;
+}
+
+.ticket_info .bus_name_and_type {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.ticket_info .bus_name_and_type img {
+    width: 60px;
+}
+
+.seat_left {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: center;
+    background-color: #E8FAE6;
+    font-weight: 500;
+    padding: 15px 20px;
+    border-radius: 15px;
+}
+
+.seat_left span {
+    color: #1DD100 !important;
+}
+
+.route_info {
+    padding: 10px 30px 25px  30px;
+    margin: 20px 0;
+    background-color: #F7F8F8;
+    border-radius: 30px;
+}
+
+.route {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 70px;
+    border-bottom: 2px dashed #C6C7CA;
+}
+
+.route .title {
+    color: #64676E;
+    font-weight: 500;
+}
+
+.route .route_name {
+    font-weight: 600;
+}
+
+.additional_info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 25px;
+    gap: 10px;
+}
+
+.additional_info div {
+    max-width: 300px;
+    min-width: 275px;
+    text-align: center;
+    background-color: #EBECED;
+    padding: 15px 20px;
+    border-radius: 10px;
+    color: #31343D;
+    font-weight: 500;
+}
+
+.ticket_info .right_side {
+    text-align: center;
+}
+
+.ticket_info .right_side span {
+    font-size: 22px;
+    color: #7c7a7a;
+}
+
+.ticket_info .right_side img {
+    padding-bottom: 20px;
+    margin: auto;
+}
+
+#ticket .ticket_info {
+    position: relative;
+}
+
+#ticket .left_side::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 73%;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(images/info-devider.png);
+}
+
+@media screen and (max-width: 1672px) {
+    .additional_info div {
+        min-width: 100px;
+    }
+}
+
+@media screen and (max-width: 1492px) {
+    .additional_info {
+        justify-content: start;
+    }
+
+    #ticket .left_side::after {
+        left: 70%;
+    }
+}
+
+@media screen and (max-width: 1492px) {
+    .ticket_info {
+        grid-template-columns: 1fr;
+    }
+
+    #ticket .left_side::after {
+        background-image: url('');
+    }
+
+    .ticket_info .right_side {
+        border-top: 2px dashed #1DD100;
+        padding-top: 30px;
+    }
+
+    .ticket_info .right_side span {
+        font-size: 16px
+    }
+}
+
+@media screen and (max-width: 560px) {
+    #ticket {
+        border-radius: 30px 30px 0 0;
+    }
+
+    .ticket_info .bus_name_and_type img {
+        width: 30px;
+    }    
+
+    .ticket_info .bus_name_and_type {
+        gap: 8px;
+    }
+
+    .bus_name_and_type h2 {
+        font-size: 14px;
+    }
+
+    .bus_name_and_type span {
+        font-size: 11px;
+    }
+
+    .seat_left {
+        gap: 5px;
+        padding: 8px 10px;
+        border-radius: 10px;
+    }
+
+    .seat_left img {
+        width: 18px;
+    }
+
+    .seat_left span {
+        font-size: 12px;
+    }
+
+    .ticket_info {
+        padding: 20px 5px;
+        gap: 10px;
+    }
+
+    .ticket_info img {
+        padding-bottom: 0;
+    }
+    
+    .route_info {
+        padding: 0px 15px 20px  15px;
+    }
+
+    .additional_info div {
+        padding: 10px
+    }
+
+    #ticket .top_content {
+        max-width: 300px;
+        margin: auto;
+    }
+}
+/* ticket info end */
+
+
+
+/* Seat select start */
+.seat_and_checkout {
+    display: flex;
+    background-color: #fff;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.select_seat {
+    width: 60%;
+    padding-right: 30px;
+    border-right: 2px dashed #C6C7CA;
+}
+
+.demonstration {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 0;
+    border-bottom: 2px dashed #C6C7CA;
+}
+
+.demonstration .available span {
+    color: #7c7a7a;
+}
+
+.demonstration div {
+    display: flex;
+    align-content: center;
+    gap: 8px;
+}
+
+.demonstration .selected span {
+    color: #1DD100;
+}
+
+.select_seat h2, .checkout h2 {
+    border-bottom: 2px dashed #C6C7CA;
+    padding-bottom: 15px;
+}
+
+.select_seat .driver {
+    padding: 15px 15px;
+    background-color: #E6E6E7;
+    max-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    margin: 20px 0;
+    margin-left: auto;
+}
+
+.select_seat .driver span {
+    font-size: 28px;
+    color: #7c7a7a;
+}
+
+.all_seats {
+    display: flex;
+    flex-direction: column;
+}
+
+.all_seats .seat_row {
+    display: flex;
+    align-items: center;
+    /* gap: 30px; */
+}
+
+.all_seats .left, .all_seats .right {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 30px;
+}
+
+.main_seat {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.single_seat {
+    width: 120px;
+    background-color: #F7F8F8;
+    padding: 15px 15px;
+    border-radius: 10px;
+    margin: 10px 0;
+    text-align: center;
+    cursor: pointer
+}
+
+/* .single_seat:hover {
+    background-color: #7c7a7a;
+} */
+
+.single_seat.selected {
+    background:#1DD100;
+    color: #fff;
+}
+
+.row_name {
+    width: 40px
+}
+
+@media screen and (max-width: 1460px) {
+    .single_seat, .select_seat .driver {
+        width: 100px;
+        padding: 10px 10px;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    .single_seat, .select_seat .driver {
+        width: 80px;
+    }
+
+    .all_seats .left, .all_seats .right {
+        gap: 20px;
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    .single_seat, .select_seat .driver {
+        width: 60px;
+    }
+
+    .all_seats .left, .all_seats .right {
+        gap: 10px;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .seat_and_checkout {
+        flex-direction: column;
+    }
+
+    .select_seat {
+        width: auto;
+        border-right: none;
+        padding-right: 0;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    .seat_and_checkout {
+        padding: 20px 10px;
+    }
+
+    .row_name {
+        width: 20px;
+    }
+}
+/* Seat select end */
+
+
+/* checkout and summery start */
+.checkout {
+    padding-left: 30px;
+    width: 40%;
+}
+
+.summary_box {
+    width: 100%;
+    background-color: #F7F8F8;
+    padding: 20px 20px 30px 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+.checkout table {
+    text-align: center;
+    width: 100%;  
+    border-bottom: 2px solid #C6C7CA;
+}
+
+.checkout table tr:nth-child(1) {
+    height: 50px;
+}
+
+.checkout table tr {
+    height: 40px;
+}
+
+.checkout table th {
+    border-bottom: 2px dashed #C6C7CA;
+}
+
+th span {
+    background: #1DD100;
+    padding: 0 5px;
+    font-size: 13px;
+    font-weight: 500;
+    border-radius: 6px;
+    color: #fff;
+}
+
+.checkout table th:nth-child(1), .checkout table td:nth-child(1) {
+    text-align: left;
+}
+
+.checkout table th:nth-child(2), .checkout table td:nth-child(2) {
+    text-align: center;
+}
+
+.checkout table th:nth-child(3), .checkout table td:nth-child(3) {
+    text-align: right;
+}
+
+.price_row {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 500;
+    padding-top: 10px;
+}
+
+.coupon_input_wrap {
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin: 15px 0 8px 0;
+}
+
+.coupon_input_wrap input {
+    border: none;
+    outline: none;
+    width: auto;
+    width: 80%;
+}
+
+.coupon_input_wrap button {
+    border: none;
+    outline: none;
+    background-color: #1DD100;
+    color: #fff;
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+.checkout_form {
+    margin-top: 40px;
+}
+
+.form_row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.form_row label {
+    font-weight: 600;
+}
+
+.form_row input {
+    padding: 15px 10px;
+    border: 2px solid #E6E6E7;
+    border-radius: 15px;
+    outline: none;
+}
+
+.checkout_form button {
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px;
+    border-radius: 15px;
+    background-color: #1DD100;
+    color: #fff;
+    font-weight: 600;
+}
+
+.turms_wraper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.turms_wraper a {
+    text-decoration: underline;
+    color: #7c7a7a;
+}
+
+@media screen and (max-width: 768px) {
+    .checkout {
+        width: 100%;
+        padding-left: 0;
+        margin-top: 40px;
+    }
+}
+/* checkout and summery end */
+
+
+/* Module 1 start */
+.modal_1 {
+    width: 50%;
+    height: auto;
+    background-color: #fff;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 2px solid #1DD100;
+    border-radius: 20px;
+    text-align: center;
+    margin: auto;
+    padding: 30px 60px;
+}
+
+.modal_1 img {
+    margin: auto;
+}
+
+.modal_1 h1 {
+    font-size: 37px !important;
+    font-weight: 500;
+    color: #20AE5C;
+}
+
+.modal_1 h2 {
+    font-size: 24px !important;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.modal_1 button {
+    width: 30%;
+    background-color: #20AE5C;
+    color: #fff;
+    padding: 8px 0;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-weight: 400;
+    margin-top: 20px;
+}
+
+#error_modal {
+    width: 600px;
+    padding: 30px 40px;
+    border-color: red;
+
+}
+
+#error_modal h1 {
+    color: red;
+}
+
+#error_modal button {
+    background-color: red;
+}
+
+@media screen and (max-width: 700px) {
+    #error_modal {
+        width: 300px;
+        padding: 20px 10px;
+    }
+}
+
+@media screen and (max-width: 860px) {
+    .modal_1 {
+        width: 80%;
+        padding: 20px 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .modal_1 {
+        width: 90%;
+        padding: 10px 10px;
+    }
+
+    .modal_1 h2 {
+        font-size: 17px !important;
+        margin-top: 10px;
+    }
+
+    .modal_1 button {
+        width: auto;
+        padding: 8px 8px;
+        font-size: 16px;
+    }
+}
+/* Moudle 1 end */
