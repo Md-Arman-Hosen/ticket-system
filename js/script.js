@@ -1,5 +1,5 @@
 let selected_seats = [];
-let coupon_codes = ['NEW15', 'Couple 20'];
+let coupon_codes = ['Arman-25', 'Fahim-20'];
 
 let single_seat = document.querySelectorAll('.single_seat');
 single_seat.forEach(seat => {
@@ -22,8 +22,8 @@ single_seat.forEach(seat => {
 });
 
 
-// add or remove selection on seat
-function selection(elem) {
+// add or remove selection on seat using arrow function
+ const selection = elem => {
     if(elem.hasAttribute('selected')) {
         elem.classList.remove('selected');
         elem.removeAttribute('selected');
@@ -34,8 +34,8 @@ function selection(elem) {
 }
 
 
-// get all selected seat into array
-function getSelectedSeat() {
+// get all selected seat into array using arrow function
+ const getSelectedSeat = () => {
     selected_seats = [];
     single_seat.forEach(seat => {
         if(seat.hasAttribute('selected')){
@@ -59,7 +59,7 @@ function seatAmount() {
 
 
 // update summury 
-function summary() {
+ const summary= () => {
     let summary_items_parent = document.querySelector('#summary_items_wraper');
     let total_price_tag = document.querySelector('#total_price');
 
@@ -72,13 +72,13 @@ function summary() {
         tr.innerHTML =  `
                 <td>${seat}</td>       
                 <td>Economoy</td>
-                <td>550</td>`;
+                <td>600</td>`;
         summary_items_parent.appendChild(tr);
 
     });
 
     // update total price
-    let total_price = selected_seats.length * 550;
+    let total_price = selected_seats.length * 600;
     total_price_tag.innerHTML = "BDT " + total_price;
     total_price_tag.setAttribute('price', total_price);
 
@@ -121,7 +121,7 @@ function coupon() {
                 }
 
             }else { 
-                openError("Sorry! The coupon you entered is not valid", "Only coupons available are 'NEW15' and 'Couple 20'.")
+                openError("Sorry! The coupon you entered is not valid", "Only coupons available are 'Arman-25' and 'Fahim-20'.")
             }
 
             // update grand total
